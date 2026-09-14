@@ -229,19 +229,23 @@
             <h2>Registration Form</h2>
             <p>Please fill in all the fields below to register for the event.</p>
 
-            <form id="registrationForm" action="#" method="post">
+            <form id="registrationForm" action="#" method="post" novalidate>
 
                 <label for="fullname">Full Name:</label>
                 <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+                <small class="field-error" id="fullnameError"></small>
 
                 <label for="studentid">Student ID:</label>
                 <input type="text" id="studentid" name="studentid" placeholder="Enter your student ID" required>
+                <small class="field-error" id="studentidError"></small>
 
                 <label for="email">Email Address:</label>
                 <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                <small class="field-error" id="emailError"></small>
 
                 <label for="prefdate">Preferred Attendance Date:</label>
                 <input type="date" id="prefdate" name="prefdate" required>
+                <small class="field-error" id="prefdateError"></small>
 
                 <label>Which day do you prefer to attend?</label>
                 <input type="radio" id="day1" name="daypreference" value="day1" required>
@@ -258,6 +262,7 @@
                 <br>
                 <input type="radio" id="alldays" name="daypreference" value="all">
                 <label for="alldays" style="display:inline; font-weight:normal;">All Three Days</label>
+                <small class="field-error" id="daypreferenceError"></small>
 
                 <label>Select the sessions you want to attend:</label>
                 <input type="checkbox" id="ai" name="sessions" value="ai">
@@ -280,6 +285,11 @@
 
                 <p id="registrationStatus">Registration status will appear here.</p>
                 <p id="seatStatus">Seat availability will appear here.</p>
+                <div id="savedRegistration" class="saved-registration" hidden>
+                    <h3>Saved Practice Data</h3>
+                    <p id="savedRegistrationMessage"></p>
+                    <pre id="jsonPreview"></pre>
+                </div>
 
                 <br><br>
                 <button type="submit">Submit Registration</button>

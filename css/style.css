@@ -231,6 +231,51 @@ form input[type="radio"] + label, form input[type="checkbox"] + label {
     color: #1a3c6e;
 }
 
+.field-error {
+    display: block;
+    min-height: 18px;
+    margin-top: 4px;
+    color: #b42318;
+    font-weight: bold;
+}
+
+.status-error {
+    background-color: #fff1f0 !important;
+    color: #b42318 !important;
+}
+
+.status-success {
+    background-color: #e9f7ef !important;
+    color: #176b3a !important;
+}
+
+.saved-registration {
+    margin-top: 20px;
+    padding: 16px;
+    border: 1px solid #b9dec8;
+    border-radius: 4px;
+    background-color: #f3fbf6;
+}
+
+.saved-registration h3 {
+    margin: 0 0 8px;
+    color: #176b3a;
+}
+
+.saved-registration p {
+    margin: 0 0 10px;
+}
+
+.saved-registration pre {
+    margin: 0;
+    padding: 12px;
+    overflow-x: auto;
+    background-color: #ffffff;
+    border: 1px solid #d4eadb;
+    color: #23412d;
+    font-size: 13px;
+}
+
 form button {
     margin: 18px 6px 0 0;
     padding: 11px 17px;
